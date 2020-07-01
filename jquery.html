@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+	<script src="jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$("#blast").click(function()
+			{
+			$("p").hide();
+		});
+			$("#blast5").click(function()
+			{
+			$("p").show(1000);
+		});
+			$("img").click(function()
+			{
+				$(this).hide();
+				alert("I can hide by myself");
+			});
+			$("#blast4").click(function()
+			{
+				$("table").toggle();
+				
+			});
+			$("#blast2").click(function()
+			{
+				alert("Headings bg-color will change now");
+				$("h1").css("background-color","coral");
+			});
+			$("#blast3").click(function()
+			{
+				$("p").addClass("f");
+
+			});
+			$("form").submit(function()
+			{
+				alert("Thank you!!Form got submitted");
+			});
+			
+			
+
+		});
+	</script>
+	<style>
+		.f
+		{
+			font-size:30px;
+		}
+	</style>
+	
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="navbar navbar-default">
+		<a class="navbar-brand" href="#">Tech-World</a>
+		<ul class="nav navbar-nav">
+			<li class="active" ><a href="bootstrap1.html">Home</a></li>
+			<li><a href="bootstrap1.html">About us</a></li>
+			<li><a href="bootstrap1.html">Contact</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>jQuery Implementation</h1><br>
+			
+		</div></div>
+		<div class="container">
+			<center><button class="btn-primary" id="blast2">Click here to change heading backgrounds</button>&nbsp;&nbsp;&nbsp;<button class="btn-success" id="blast">Click here to hide paragraphs</button>&nbsp;&nbsp;&nbsp;<button class="btn-success" id="blast5">Click here to show the hidden paragraphs</button>&nbsp;&nbsp;&nbsp;<button class="btn-warning" id="blast3">Click here to change font-size of paras.</button></center><br>
+			
+			
+			<div class="panel panel-defualt" >
+				<div class="panel-heading"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" class="img-thumbnail" width="150" height="150" align="center"></div>
+				<div class="panel-body" ><p><b>HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link available on a webpage is called Hypertext.As its name suggests, HTML is a Markup Language which means you use HTML to simply "mark-up" a text document with tags that tell a Web browser how to structure it to display.</b></p></div></div>
+            <div class="panel panel-defualt">
+				<div class="panel-heading"><img src="https://pluralsight.imgix.net/paths/path-icons/css-c9b214f0d7.png" class="img-thumbnail" width="150" height="150" align="center"></div>
+				<div class="panel-body"><p><b>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. </b></p></div></div>
+				<div class="panel panel-defualt">
+				<div class="panel-heading"><img src="https://i.pinimg.com/originals/94/ae/2d/94ae2dcd4fa410811cab4e1fbb403340.png" class="img-thumbnail" width="200" height="200"></div>
+				<div class="panel-body"><p><b>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</b></p></div></div><br>
+
+			
+		</div>
+			
+			
+		</div>
+		<br>
+		<div class="container">
+			<div class="jombotron">
+				<h1>Compatibility check</h1><br><br>
+				<center><button class="btn-danger" id="blast4">Click here to hide & seek table.</button></center><br>
+		<table class="table">
+			<tr><th>Comaptibility</th><th>Google Chrome</th><th>Mozilla firefox</th><th>Internet Explorer</th></tr>
+			<tr><th>HTML5</th><td class="success"><span class="glyphicon glyphicon-ok"></td><td class="success"><span class="glyphicon glyphicon-ok">(older versions)</td><td class="danger"><span class="glyphicon glyphicon-remove"></td></tr>
+			<tr><th>CSS</th><td class="success"><span class="glyphicon glyphicon-ok"></td><td class="success"><span class="glyphicon glyphicon-ok"></td><td class="danger"><span class="glyphicon glyphicon-remove"></th></tr>
+			<tr><th>Bootstrap</th><td class="success"><span class="glyphicon glyphicon-ok"></td><td class="danger"><span class="glyphicon glyphicon-remove"></td><td class="danger"><span class="glyphicon glyphicon-remove"></td></tr>
+		</table>
+	</div>
+</div>
+<div class="container" >
+	<h1>Let us know more about you.<small>Fill the form below</small></h1><br>
+<form >
+	<div class="form-group">
+	First Name:
+	<input type="text" class="form-control">
+	</div>
+		<div class="form-group">
+	Email-ID:
+	<input type="email" class="form-control">
+	</div>
+		<div class="form-group">
+	Password:
+	<input type="password" class="form-control">
+	</div>
+	<button class="btn btn-success">Submit</button>
+</form><br>
+</div>
+<div class="container">
+	<div class="jumbotron">
+		
+		<h2 >Thank you for visiting our site.</h2><br>
+		<h4>Stay Home,Stay Safe</h4><br><h5>Let's fight COVID-19 together with distancing..</h5></div></div>
+		
+
+
+</body>
+</html>
+</body>
+</html>
