@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJAX</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#b1").click(function(){
+    $.get("demo.asp", function(data, status){
+
+      alert("Data: " + data );
+     
+    });
+  });
+  $("#b2").click(function(){
+  $.post("demo_test_post.asp",
+  {
+    name: "Sindhu";
+    
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+
+  });
+});
+});
+</script>
+</head>
+<body>
+
+<div class="container" >
+		<div class="jumbotron">
+<h1>AJAX Implementation</h1><br><br>
+<button class="btn btn-primary" id="b1">Send an HTTP GET request</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="btn btn-warning" id="b2">Send an HTTP POST request</button>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Day 2</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+  	$(document).ready(function()
+  	{
+  		$("#b1").dblclick(function()
+  		{
+  			alert("Thanks for double clicking me & check the paragraph color");
+  			$("h3").css("color","blue");
+  		});
+  		$("#b2").click(function()
+  		{
+  			$("#h3").fadeIn(1000);
+  		});
+  		$("#b3").click(function()
+  		{
+  			$("#h31").fadeOut(1000);
+  		});
+  		$("#b4").click(function()
+  		{
+  			$("#h32").fadeToggle(1000);
+  		});
+  		$("#div1").click(function()
+  		{
+  			$("#div2").slideDown(1000);
+  		});
+  		$("#div2").click(function()
+  		{
+  			$("#div1").slideUp(1000);
+  		});
+  		$("#div3").click(function()
+  		{
+  			$("#div4").slideToggle(1000);
+  		});
+  		$("#b5").click(function()
+  		{
+  			$("p").animate({fontSize:'25px'});
+  			$("img").animate({left:'1000px',width:'500px',height:'500px'});
+
+  		});
+  		$("#div5").click(function()
+  		{
+  			$("#div2").stop();
+  			$("#div4").stop();
+  		});
+  
+  	});
+  </script>
+  <style>
+  	body
+  	{
+  		margin-bottom:500px;
+  	}
+  </style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Advanced Features of JQuery</h1>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Double click Property</h1><button id="b1" class="btn btn-primary"><strong>Double Click</strong> me</button><br>
+		<h3>jQuery dblclick() function fires when an HTML element is double clicked. This method will attach an event handler to the double click event. We can do desired manipulations on the selected HTML element using the jQuery double click event handler.</h3>
+	</div>
+		<hr>
+	<div class="container">
+		<h1>Fade Property</h1><br>
+		<button class="btn btn-warning" id="b2">Fade In</button>&nbsp;&nbsp;<button class="btn btn-warning" id="b3">Fade Out</button>&nbsp;&nbsp;<button class="btn btn-warning" id="b4">Fade Toggle</button><br>
+		<h3 id="h3" style="display: none">Welcome to the website</h3>
+		<h3 id="h31">Stay Home and Stay Safe from COVID-19</h3>
+		<h3 id="h32">Thanks For visiting us!!</h3>
+</div>
+<hr>
+<div class="container">
+	<h1>Slide Property</h1><br>
+	<div class="alert alert-success" id="div1">Click me to <strong>slide down</strong></div>&nbsp;&nbsp;<div class="alert alert-danger" id="div5">Click me to <strong>stop</strong> Sliding</div>
+	<div class="alert alert-danger" style="display:none" id="div2">Thanks for sliding. Stay at homes & click me to slide Up</div>
+	<div class="alert alert-info" id="div3">CLick me to <strong>Toggle</strong> slide</div>
+	<div class="alert alert-info" id="div4" style="display: none">Thanks Humans!!</div>
+</div>
+	<hr>
+<div class="container">
+	<h1>Animation Property</h1><br>
+	<button class="btn btn-danger" id="b5">Click to <strong>Animate</strong></button><br><br>
+
+	<p>Welcome to jQuery World!!</p>
+	<img src="https://ourcodeworld.com/public-media/articles/articleocw-562bb367bbee4.png" width="200" height="200">
+</div>
+	<hr>
+
+</body>
+</html>
